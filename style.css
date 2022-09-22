@@ -1,9 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
+/* Colors */
+:root {
+    --pale: hsl(225, 100%, 94%);
+    --bright: hsl(245, 75%, 52%);
+    --verypale: hsl(225, 100%, 98%);
+    --desaturated: hsl(224, 23%, 55%);
+    --dark: hsl(223, 47%, 23%);
+    /* Font */
+    --font: 'Red Hat Display', sans-serif;
+}
+
+/* ResetCSS */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+}
+
+body {
+    background: url(./images/pattern-background-desktop.svg), var(--pale);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    font-family: var(--font)
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%, .11);
+    overflow: hidden;
+    /* svg size */
+    max-width: 27.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+header img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card_link {
+    margin-inline-start: auto;
+}
+
+.card_body p {
+    color: var(--desaturated);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.19px;
+    line-height: 1.6;
+    margin: 1rem 2.8rem;
+}
+
+h1 {
+    color: var(--dark);
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.card_inline {
+    background: var(--verypale);
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    margin: 0 2.5em 1.5em 2.5em;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.card_icon {
+    display: flex;
+}
+
+.card_details {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.2em;
+    gap: .2em;
+}
+
+h2 {
+    color: var(--dark);
+    font-size: 1rem;
+}
+
+.card_details p {
+    color: var(--desaturated);
+    font-size: .9rem;
+}
+
+.card_link a {
+    color: var(--bright);
+    font-weight: 700;
+    font-size: .8rem;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.card_link a:hover {
+    opacity: .7;
+}
+
+.card_link a:focus {
+    /* Provide a fallback style for browsers that don't support :focus-visible */
+    outline: 3px dotted var(--desaturated);
+}
+
+.card_link a:focus:not(:focus-visible) {
+    /* Remove the focus indicator on mouse-focus for browsers that do support :focus-visible */
+    outline: none;
+}
+
+.card_link a:focus-visible {
+    /* for browsers that do support :focus-visible */
+    outline: 3px dotted var(--desaturated);
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: .65em;
+    margin: 0 1.5em 0.5em 1.5em;
+}
+
+.pay {
+    all: unset;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: .95rem;
+    font-weight: 700;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    padding: 1em;
+}
+
+.pay:focus {
+    /* Provide a fallback style for browsers that don't support :focus-visible */
+    outline: 3px dashed var(--desaturated);
+}
+
+.pay:focus:not(:focus-visible) {
+    /* Remove the focus indicator on mouse-focus for browsers that do support :focus-visible */
+    outline: none;
+}
+
+.pay:focus-visible {
+    /* for browsers that do support :focus-visible */
+    outline: 3px dashed var(--desaturated);
+}
+
+.proceed {
+    background: var(--bright);
+    color: white;
+    box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, .25);
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.proceed:hover {
+    opacity: .7;
+}
+
+.cancel {
+    color: var(--desaturated);
+    transition: color .5s ease-in-out;
+}
+
+.cancel:hover {
+    color: var(--dark);
 }
 
 .attribution {
@@ -12,65 +194,6 @@
     text-align: center;
 }
 
-.attribution a {
+footer a {
     color: hsl(228, 45%, 44%);
-}
-
-p {
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: -0.19px;
-    line-height: 18px;
-    color: hsl(220, 15%, 55%);
-    text-align: center;
-    padding-inline: 16px;
-    padding-top: 16px;
-}
-
-h2 {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 30px;
-    color: hsl(218, 44%, 22%);
-    text-align: center;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: hsl(212, 45%, 89%);
-    padding: 85px 28px;
-    font-family: 'Outfit', sans-serif;
-}
-
-.card {
-    max-width: 320px;
-    padding: 16px 16px 40px;
-    background: white;
-    border-radius: 1.25em;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 24px;
-    box-shadow: 0px 25px 25px hsla(219, 15%, 55%, 0.167);
-}
-
-img {
-    width: 100%;
-    border-radius: 0.75em;
-}
-
-.sr-only {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    -webkit-clip-path: inset(50%) !important;
-    clip-path: inset(50%) !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    margin: -1px !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    white-space: nowrap !important;
 }

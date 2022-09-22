@@ -6,32 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Frontend Mentor | QR code component</title>
-
   <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Order summary card</title>
 </head>
 
 <body>
+  <!-- Main Content -->
   <main>
-    <!-- Main Content -->
-    <div class="card">
-      <img src="./images/image-qr-code.png" alt="QR Code For The User">
-      <div class="card_text">
-        <h1 class="sr-only">Improve your front-end skills by building projects</h1> <!-- For Screen Readers -->
-        <h2>Improve your front-end skills by building projects</h2>
-        <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    <article class="card">
+
+      <header>
+        <img src="./images/illustration-hero.svg" alt="Enjoy premium music!">
+        <h1>Order Summary</h1>
+      </header>
+
+      <div class="card_body">
+        <p>You can now listen to millions of songs, audiobooks, and podcasts on any
+          device anywhere you like!</p>
       </div>
-    </div>
+
+      <div class="card_inline">
+        <div class="card_icon">
+          <img src="./images/icon-music.svg" alt="icon">
+        </div>
+
+        <div class="card_details">
+          <h2>Annual Plan</h2>
+          <p>$59.99/year</p>
+        </div>
+        <div class="card_link">
+          <a href="#">Change</a>
+        </div>
+
+      </div>
+
+      <div class="payment">
+        <button class="pay proceed">Proceed to Payment</button>
+        <a class="pay cancel" href="">Cancel Order</a>
+      </div>
+
+    </article>
   </main>
 
 
+  <!-- Attribution -->
   <footer>
-    <!-- Sub Content / Attribution and etc. -->
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend
         Mentor</a>.
-      Coded by <a href="https://dogukansportfolio.w3spaces.com/" target="_blank" rel="noopener">Doğukan ŞIHMAN</a>.
+      Coded by <a href="https://dogukansportfolio.w3spaces.com/" rel="noopener" target="_blank">Doğukan ŞIHMAN</a>.
     </div>
   </footer>
 
